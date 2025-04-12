@@ -37,6 +37,9 @@ kotlin {
     tvosArm64()
     tvosSimulatorArm64()
     tvosX64()
+    iosArm64()
+    iosX64()
+    iosSimulatorArm64()
 }
 
 publishing {
