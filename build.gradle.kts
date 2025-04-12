@@ -1,3 +1,6 @@
+@file:OptIn(ExperimentalWasmDsl::class)
+
+import org.jetbrains.kotlin.gradle.ExperimentalWasmDsl
 import org.jetbrains.kotlin.gradle.dsl.JvmTarget
 
 plugins {
@@ -26,6 +29,14 @@ kotlin {
     jvm {
         compilerOptions.jvmTarget = JvmTarget.JVM_1_8
     }
+    watchosArm32()
+    watchosArm64()
+    watchosDeviceArm64()
+    watchosSimulatorArm64()
+    watchosX64()
+    tvosArm64()
+    tvosSimulatorArm64()
+    tvosX64()
 }
 
 publishing {
