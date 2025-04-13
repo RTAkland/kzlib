@@ -44,7 +44,7 @@ kotlin {
 }
 ```
 
-> The latest version of kzlib can be found at [https://repo.maven.rtast.cn/#/releases/cn/rtast/kzlib/kzlib](https://repo.maven.rtast.cn/listing/releases/cn/rtast/kzlib/kzlib)
+> The latest version of kzlib can be found at https://repo.maven.rtast.cn/listing/releases/cn/rtast/kzlib/kzlib
 
 # Licenses
 
@@ -109,7 +109,7 @@ kotlin {
 }
 ```
 
-> 最新版本可以在这里找到 [https://repo.maven.rtast.cn/#/releases/cn/rtast/kzlib/kzlib](https://repo.maven.rtast.cn/listing/releases/cn/rtast/kzlib/kzlib)
+> 最新版本可以在这里找到 https://repo.maven.rtast.cn/listing/releases/cn/rtast/kzlib/kzlib
 
 # 开源
 
