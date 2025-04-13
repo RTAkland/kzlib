@@ -40,6 +40,20 @@ kotlin {
     iosArm64()
     iosX64()
     iosSimulatorArm64()
+    js(IR) {
+        nodejs()
+        browser()
+    }
+
+    sourceSets {
+        commonTest.dependencies {
+            implementation(kotlin("test"))
+        }
+
+        jsMain.dependencies {
+            api(npm("pako", "2.1.0"))
+        }
+    }
 }
 
 publishing {
