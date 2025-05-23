@@ -2,7 +2,7 @@
 
 Zlib for Kotlin Multiplatform project
 
-It supported the following targets:
+It supports the following targets:
 
 - jvm(1.8)
 - mingwX64
