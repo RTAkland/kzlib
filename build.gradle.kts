@@ -58,7 +58,7 @@ kotlin {
 
 publishing {
     repositories {
-        maven("https://maven.rtast.cn/releases/") {
+        maven("https://repo.maven.rtast.cn/releases/") {
             credentials {
                 username = "RTAkland"
                 password = System.getenv("PUBLISH_TOKEN")
