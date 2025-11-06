@@ -26,9 +26,7 @@ kotlin {
     macosX64()
     linuxX64()
     linuxArm64()
-    jvm {
-        compilerOptions.jvmTarget = JvmTarget.JVM_1_8
-    }
+    jvm { compilerOptions.jvmTarget = JvmTarget.JVM_1_8 }
     watchosArm32()
     watchosArm64()
     watchosDeviceArm64()
@@ -42,7 +40,13 @@ kotlin {
     iosSimulatorArm64()
     js(IR) {
         nodejs()
-        browser()
+        browser {
+            testTask {
+                useKarma {
+                    useChrome()
+                }
+            }
+        }
     }
 
     sourceSets {
@@ -58,7 +62,9 @@ kotlin {
 
 publishing {
     repositories {
+        mavenLocal()
         maven("https://repo.maven.rtast.cn/releases/") {
+            name = "RTAST"
             credentials {
                 username = "RTAkland"
                 password = System.getenv("PUBLISH_TOKEN")
