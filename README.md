@@ -22,7 +22,7 @@ repositories {
 kotlin {
     sourceSets {
         commonMain.dependencies {
-            implementation("cn.rtast.kzlib:kzlib:<version>")
+            implementation("cn.rtast.kzlib:kzlib:0.0.8")
         }
     }
 }
