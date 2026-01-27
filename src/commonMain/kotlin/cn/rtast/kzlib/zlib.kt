@@ -7,14 +7,17 @@
 
 
 @file:OptIn(ExperimentalUnsignedTypes::class)
-@file:Suppress("unused")
 
 package cn.rtast.kzlib
+
+public expect fun ByteArray.gzipCompress(): ByteArray
+
+public expect fun ByteArray.gzipDecompress(): ByteArray
 
 public expect fun ByteArray.zlibCompress(): ByteArray
 
 public expect fun ByteArray.zlibDecompress(): ByteArray
 
-public fun UByteArray.zlibCompress() = this.toByteArray().zlibCompress()
+public fun UByteArray.zlibCompress(): ByteArray = this.toByteArray().zlibCompress()
 
-public fun UByteArray.zlibDecompress() = this.toByteArray().zlibDecompress()
+public fun UByteArray.zlibDecompress(): ByteArray = this.toByteArray().zlibDecompress()

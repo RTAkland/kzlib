@@ -1,10 +1,7 @@
-@file:OptIn(ExperimentalWasmDsl::class)
-
-import org.jetbrains.kotlin.gradle.ExperimentalWasmDsl
 import org.jetbrains.kotlin.gradle.dsl.JvmTarget
 
 plugins {
-    kotlin("multiplatform") version "2.1.20"
+    kotlin("multiplatform") version "2.2.21"
     id("maven-publish")
 }
 
@@ -27,23 +24,12 @@ kotlin {
     linuxX64()
     linuxArm64()
     jvm { compilerOptions.jvmTarget = JvmTarget.JVM_1_8 }
-    watchosArm32()
-    watchosArm64()
-    watchosDeviceArm64()
-    watchosSimulatorArm64()
-    watchosX64()
-    tvosArm64()
-    tvosSimulatorArm64()
-    tvosX64()
-    iosArm64()
-    iosX64()
-    iosSimulatorArm64()
     js(IR) {
         nodejs()
         browser {
             testTask {
                 useKarma {
-                    useChrome()
+                    useChromeHeadless()
                 }
             }
         }
@@ -55,7 +41,7 @@ kotlin {
         }
 
         jsMain.dependencies {
-            api(npm("pako", "2.1.0"))
+            implementation(npm("pako", "2.1.0"))
         }
     }
 }
